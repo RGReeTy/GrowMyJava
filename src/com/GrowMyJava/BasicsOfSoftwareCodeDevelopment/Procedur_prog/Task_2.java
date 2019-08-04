@@ -1,4 +1,4 @@
-package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog.Proced_progr;
+package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog;
 
 import java.util.Scanner;
 //Вычислить значение выражения по формуле (все переменные принимают действительные значения):

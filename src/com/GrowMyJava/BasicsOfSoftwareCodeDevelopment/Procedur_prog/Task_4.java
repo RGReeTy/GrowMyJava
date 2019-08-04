@@ -1,4 +1,4 @@
-package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog.Proced_progr;
+package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

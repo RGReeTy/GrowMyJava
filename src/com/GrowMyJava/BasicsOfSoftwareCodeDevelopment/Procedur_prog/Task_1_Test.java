@@ -1,4 +1,4 @@
-package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog.Proced_progr;
+package com.GrowMyJava.BasicsOfSoftwareCodeDevelopment.Procedur_prog;
 
 import java.util.Scanner;
 //Найдите значение функции: z = ( (a – 3 ) * b / 2) + c
