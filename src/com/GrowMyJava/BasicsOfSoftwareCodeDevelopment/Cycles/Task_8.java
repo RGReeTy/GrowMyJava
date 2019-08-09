@@ -20,7 +20,7 @@ public class Task_8 {
         boolean hasUniNum = false;
         while (x != 0) {         // compare x with temp y (tempY)
             while (tempY != 0) {
-                if (x % 10 == tempY % 10) {  // есть одинаковое число из а в b
+                if (x % 10 == tempY % 10) {  // if some digits included at 1st and 2nd number
                     uniqTemp = uniqNums;
                     while (uniqTemp != 0) { // try find only unique digits
                         if (uniqTemp % 10 == x % 10) hasUniNum = true;
