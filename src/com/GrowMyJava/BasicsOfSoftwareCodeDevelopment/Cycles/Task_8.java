@@ -30,7 +30,7 @@ public class Task_8 {
                         uniqNums = uniqNums * 10 + (x % 10); // creating new unique number
                     }
                 }
-                tempY /= 10; // decrease
+                tempY /= 10; // decrease Y for every X
                 hasUniNum = false;
             }
             x /= 10;
