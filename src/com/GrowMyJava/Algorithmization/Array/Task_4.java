@@ -15,7 +15,6 @@ public class Task_4 {
         findMaxAndMinWithReplacing(arrayA);
     }
 
-
     public static double[] createArray(double[] arrayA, int N) {
         for (int i = 0; i < N; i++) {
             arrayA[i] = (double)(Math.round(Math.random() * N * 100))/100; //random sequence formula
