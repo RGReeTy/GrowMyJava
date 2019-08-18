@@ -16,7 +16,7 @@ public class Task_3 {
         } else {
             int[][] matrix = new int[Row][Col];
             createFullMatrix(matrix);
-            System.out.println("Array has " + Row + " rows and " + Col + " columns: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
+            System.out.println("Matrix has " + Row + " rows and " + Col + " columns: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
             System.out.println("Input an row (between 1 and " + Row + ") ..");
             int k = sc.nextInt();
             System.out.println("Input an column (between 1 and " + Col + ") ..");
