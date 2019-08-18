@@ -7,21 +7,22 @@ public class Task_3 {
     //Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input an row dimension = ");
+        System.out.println("Input a row dimension = ");
         int Row = sc.nextInt();
-        System.out.println("Input an column dimension = ");
+        System.out.println("Input a column dimension = ");
         int Col = sc.nextInt();
         if (Row < 0 && Col < 0) {
             System.out.println("Input a dimension > 0!!");
         } else {
             int[][] matrix = new int[Row][Col];
             createFullMatrix(matrix);
-            System.out.println("Array has " + Row + " rows and " + Col + " columns" + Arrays.deepToString(matrix));
-            System.out.println("Input an row coordinate (between 0 and " + Row + ") ..");
+            System.out.println("Array has " + Row + " rows and " + Col + " columns: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
+            System.out.println("Input an row (between 1 and " + Row + ") ..");
             int k = sc.nextInt();
-            System.out.println("Input an column coordinate (between 0 and " + Col + ") ..");
+            System.out.println("Input an column (between 1 and " + Col + ") ..");
             int p = sc.nextInt();
-            showMeElement(matrix, k, p, Row, Col);
+            showMeRow(matrix, k, Row);
+            showMeCol(matrix, p, Col);
         }
     }
 
@@ -34,11 +35,25 @@ public class Task_3 {
         return matrix;
     }
 
-    private static void showMeElement(int[][] matrix, int k, int p, int Row, int Col) {
-        if (k < Row && p < Col) {
-            System.out.println(matrix[k][p]);
+    private static void showMeRow(int[][] matrix, int k, int Row) {
+        System.out.print("Yours row №" + Row + " is: ");
+        if (k > 0 && k <= Row) {
+            for (int i = 0; i < matrix.length; i++) {
+                System.out.print(matrix[k - 1][i] + " ");
+            }
         } else {
-            System.out.println("Mistake. Input numbers whitch are placed between borders!");
+            System.out.println("Mistake. Input numbers which are placed between borders!");
+        }
+    }
+
+    private static void showMeCol(int[][] matrix, int p, int Col) {
+        System.out.print("\n Yours col №" + Col + " is: ");
+        if (p > 0 && p <= Col) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[j][p - 1] + " ");
+            }
+        } else {
+            System.out.println("Mistake. Input numbers which are placed between borders!");
         }
     }
 }
