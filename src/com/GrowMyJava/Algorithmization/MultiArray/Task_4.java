@@ -21,11 +21,10 @@ public class Task_4 {
         } else {
             int[][] matrix = new int[n][n];
             generateMatrix(matrix);
-            //System.out.println("Matrix has " + n + " rows and " + n + " columns: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
         }
     }
 
-    private static int[][] generateMatrix(int[][] matrix) {
+    private static void generateMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (i % 2 == 0) {
@@ -38,6 +37,5 @@ public class Task_4 {
             }
             System.out.println();
         }
-        return matrix;
     }
 }
