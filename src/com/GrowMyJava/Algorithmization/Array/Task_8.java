@@ -44,11 +44,11 @@ public class Task_8 {
     private static int[] deleteMinNumbers(int[] arrayA, int minValue) {
         int j = 0;
         int count = arrayA.length;
-        for (int elem:arrayA) {
-            if (elem== minValue) count--;
+        for (int elem : arrayA) {
+            if (elem == minValue) count--;
         }
         int[] newArr = new int[count];
-        for (int element: arrayA) {
+        for (int element : arrayA) {
             if (element != minValue) {
                 newArr[j++] = element;
             }
