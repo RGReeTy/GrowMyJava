@@ -20,7 +20,6 @@ public class Task_12 {
             System.out.println("Matrix has increased sorting rows: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
             sortRowsDecrease(matrix);
             System.out.println("Matrix has decreased sorting rows: \n" + Arrays.deepToString(matrix).replace("], ", "]\n").replace("[[", "[").replace("]]", "]"));
-
         }
     }
 

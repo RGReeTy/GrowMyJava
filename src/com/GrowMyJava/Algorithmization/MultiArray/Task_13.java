@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Task_13 {
-    //12. 13. Отсотрировать стобцы матрицы по возрастанию и убыванию значений эементов.
+    //13. Отсотрировать стобцы матрицы по возрастанию и убыванию значений эементов.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input a dimension of matrix 'N' = ");
