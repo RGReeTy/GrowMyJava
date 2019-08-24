@@ -20,13 +20,13 @@ public class Task_1 {
             int[] arrayFirst = generateMatrix(N);
             int[] arraySecond = generateMatrix(M);
             System.out.println("First array has " + N + " columns: \n" + Arrays.toString(arrayFirst));
-            System.out.println("First array has " + M + " columns: \n" + Arrays.toString(arraySecond));
+            System.out.println("Second array has " + M + " columns: \n" + Arrays.toString(arraySecond));
             System.out.println("Input a natural number 'k' = ");
             int k = sc.nextInt();
             if (k <= 0 || k > arrayFirst.length) {
-                System.out.println("Input a positive number 0<'k'< length of first array!!");
+                System.out.println("Input a positive number 0 <'k'< length of first array!!");
             } else {
-                System.out.println("First array has " + M + " columns: \n" + Arrays.toString(unionArray(arrayFirst, arraySecond, k)));
+                System.out.println("Union array has " + (N + M) + " columns: \n" + Arrays.toString(unionArray(arrayFirst, arraySecond, k)));
             }
         }
     }
