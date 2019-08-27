@@ -1,6 +1,8 @@
 package com.GrowMyJava.Algorithmization.SortedArray;
 
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task_6 {
@@ -11,31 +13,42 @@ public class Task_6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PrintWriter printWriter = new PrintWriter(System.out);
+        System.out.println("Input a dimension of array 'N' = ");
         int size = scanner.nextInt();
-        int[] a = new int[size];
-        for (int i = 0; i < size; i++) {
-            a[i] = scanner.nextInt();
+        if (size <= 0) {
+            System.out.println("Input a positive dimension > 0!!");
+        } else {
+            double[] array = generateMatrix(size);
+            System.out.println("Array has " + size + " columns: \n" + Arrays.toString(array));
+            System.out.println("Sorted array is: \n" + Arrays.toString(sortShells(array, size)));
+            scanner.close();
+            printWriter.close();
         }
-        int step = size / 2;//инициализируем шаг. while (step > 0)//пока шаг не 0
-        {
+    }
+
+    private static double[] sortShells(double[] array, int size) {
+        int step = size / 2;
+        while (step > 0) {
             for (int i = 0; i < (size - step); i++) {
-                int j = i; //будем идти начиная с i-го элемента while (j >= 0 && a[j] > a[j + step])
-//пока не пришли к началу массива
-//и пока рассматриваемый элемент больше
-//чем элемент находящийся на расстоянии шага
-                {
-//меняем их местами
-                    int temp = a[j];
-                    a[j] = a[j + step];
-                    a[j + step] = temp;
+                int j = i;
+                while (j >= 0 && array[j] > array[j + step]) {
+                    double temp = array[j];
+                    array[j] = array[j + step];
+                    array[j + step] = temp;
                     j--;
                 }
             }
-            step = step / 2;//уменьшаем шаг
+            step = step / 2;
         }
-// Выводим отсортированный массив
-        for (int i = 0; i < size; i++) {
-            printWriter.print(a[i] + " ");
-        } // После выполнения программы необходимо закрыть // потоки ввода и вывода scanner.close(); printWriter.close(); }
+        return array;
+    }
+
+    public static double[] generateMatrix(int dimension) {
+        Random rand = new Random();
+        double[] array = new double[dimension];
+        for (int a = 0; a < array.length; a++) {
+            array[a] = rand.nextDouble() * 10;
+        }
+        return array;
     }
 }
