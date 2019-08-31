@@ -2,14 +2,12 @@ package com.GrowMyJava.Algorithmization.Decomposition;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Task_4 {
     //4. На плоскости заданы своими координатами n точек. Написать метод(методы), определяющие, между какими
     //из пар точек самое большое расстояние. Указание. Координаты точек занести в массив.
     public static void main(String[] args) {
-        int array[] = create3points();
         Scanner scanner = new Scanner(System.in);
         PrintWriter printWriter = new PrintWriter(System.out);
         System.out.println("Input a XY coordinate for a first point = ");
@@ -21,46 +19,35 @@ public class Task_4 {
         System.out.println("Input a XY coordinate for a third point = ");
         int X3 = scanner.nextInt();
         int Y3 = scanner.nextInt();
-        if (N <= 0) {
+        if (X1 < 0 & Y1 < 0 & X2 < 0 & Y2 < 0 & X3 < 0 & Y3 < 0) {
             System.out.println("Input a positive dimension > 0!!");
         } else {
-            int[] array = generateMatrix(N);
-            int maxElement = findMaxElem(array);
-            System.out.println("Array has " + N + " elements : " + Arrays.toString(array));
-            System.out.println("The max element of array is " + maxElement);
-            System.out.println("The seconds max element of array is " + find2ndMaxElem(array, maxElement));
-        }
-    }
-
-    private static int[] create3points() {
-    }
-
-    private static int findMaxElem(int[] array) {
-        int maxElem = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (maxElem < array[i]) {
-                maxElem = array[i];
+            int[] point1 = {X1, Y1};
+            int[] point2 = {X2, Y2};
+            int[] point3 = {X3, Y3};
+            double[] distances = {findDistance(point1, point2), findDistance(point2, point3), findDistance(point1, point3)};
+            System.out.println("The distances between point are " + Arrays.toString(distances));
+            if (maxDistance(distances) == distances[0]) {
+                System.out.println("So maximal distance is between points 1 and 2 with value " + distances[0]);
+            } else if (maxDistance(distances) == distances[1]) {
+                System.out.println("So maximal distance is between points 2 and 3 with value " + distances[1]);
+            } else {
+                System.out.println("So maximal distance is between points 1 and 3 with value " + distances[2]);
             }
         }
-        return maxElem;
     }
 
-    private static int find2ndMaxElem(int[] array, int maxElement) {
-        int max2ndElem = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (max2ndElem < array[i] /*& array[i] != maxElement*/) {
-                if (array[i] != maxElement) max2ndElem = array[i];
-            }
+    private static double maxDistance(double[] distances) {
+        double maxValue = 0;
+        for (int i = 0; i < distances.length; i++) {
+            if (maxValue < distances[i]) maxValue = distances[i];
         }
-        return max2ndElem;
+        return maxValue;
     }
 
-    public static int[] generateMatrix(int dimension) {
-        Random rand = new Random();
-        int[] array = new int[dimension];
-        for (int a = 0; a < array.length; a++) {
-            array[a] = rand.nextInt(101);
-        }
-        return array;
+    private static double findDistance(int[] pointFirst, int[] pointSecond) {
+        //DecimalFormat f = new DecimalFormat("##.###");
+        // System.out.println(f.format(distance));
+        return Math.sqrt((Math.pow((pointFirst[0] - pointSecond[0]), 2) + (Math.pow((pointFirst[1] - pointSecond[1]), 2))));
     }
 }
