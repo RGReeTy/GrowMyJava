@@ -43,6 +43,4 @@ public class Task_9 {
     private static double getRectangleSquare(int x, int y) {
         return (x * y) / 2;
     }
-
-
 }
