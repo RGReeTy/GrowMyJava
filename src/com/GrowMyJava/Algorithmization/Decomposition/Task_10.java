@@ -18,13 +18,12 @@ public class Task_10 {
 
     private static void createArrayFromNumber(Integer userIn) {
         int number = userIn;
-        int index = 0;
         int length = getCountsOfDigits(number);
         int[] array = new int[length];
         if (number < 0) number *= -1; //create positive number
-        for (; number > 0; number /= 10) {
-            array[index] %= 10;
-            index++;
+        for (int i = array.length - 1; i >= 0; i--) {       //fill the array
+            array[i] = number % 10;
+            number = number / 10;
         }
         System.out.println(Arrays.toString(array));
     }
