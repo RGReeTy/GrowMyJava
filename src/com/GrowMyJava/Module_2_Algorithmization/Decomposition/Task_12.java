@@ -51,7 +51,6 @@ public class Task_12 {
 
             if (i > 0) {
                 if (start == array[i - 1]) {
-                    start = 0;
                     break;
                 }
             }
