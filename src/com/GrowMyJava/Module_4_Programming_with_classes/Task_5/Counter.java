@@ -6,7 +6,7 @@ public class Counter {
     //произвольными значениями. Счетчик имеет методы увеличения и уменьшения состояния, и метод
     //позволяющее получить его текущее состояние. Написать код, демонстрирующий все возможности класса.
 
-    private int counter; //set diapazon
+    private int counter; //set
 
 
     public int getCounter() {
