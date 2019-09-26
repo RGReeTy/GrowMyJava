@@ -6,8 +6,23 @@ public class Counter {
     //произвольными значениями. Счетчик имеет методы увеличения и уменьшения состояния, и метод
     //позволяющее получить его текущее состояние. Написать код, демонстрирующий все возможности класса.
 
-    private int counter; //set
+    private int counter; //set range from 0 to 99
 
+    Counter() {
+        counter = 0;
+    }
+
+    Counter(int counter) {
+        if (counter >= 0 & counter < 99) {
+            this.counter = counter;
+        } else {
+            this.counter = 0;
+        }
+    }
+
+    int getRandomCounter() {
+        return counter = (int) Math.abs(Math.random() * 100);
+    }
 
     public int getCounter() {
         return counter;
@@ -17,7 +32,20 @@ public class Counter {
         this.counter = counter;
     }
 
-    public int counterIncrease(int value) {
-        return value + 1;
+    void counterIncrease() {
+        if (counter >= 0 & counter < 99) {
+            counter++;
+        }
+    }
+
+    void counterDecrease() {
+        if (counter > 0 & counter <= 99) {
+            counter--;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return " " + counter;
     }
 }
