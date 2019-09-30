@@ -1,12 +1,19 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.Task_6;
 
-public class Task_6 {
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class Work_with_Time {
     //6. Составьте описание класса для представления времени. Предусмотрте возможности установки времени и
     //изменения его отдельных полей (час, минута, секунда) с проверкой допустимости вводимых значений. В случае
     //недопустимых значений полей поле устанавливается в значение 0. Создать методы изменения времени на
     //заданное количество часов, минут и секунд.
 
-    public static void main(String[] args) {
-        Work_with_Time date = new Work_with_Time();
-    }
+    private LocalTime time;
+    private int hour;
+    private int minuts;
+    private int seconds;
+
+
 }
