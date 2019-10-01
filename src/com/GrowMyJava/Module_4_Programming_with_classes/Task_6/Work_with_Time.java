@@ -72,7 +72,11 @@ public class Work_with_Time {
             while (added_hours > 23) {
                 added_hours -= 24;
             }
-            setHour(this.hour + added_hours);
+            if (this.hour + added_hours > 24) {
+                setHour(this.hour + added_hours - 24);
+            } else {
+                setHour(this.hour + added_hours);
+            }
         }
     }
 
@@ -80,11 +84,17 @@ public class Work_with_Time {
         if (added_minutes < 0) {
             System.out.println("Mistake!");
         } else {
+            int counter = 0;
             while (added_minutes > 59) {
-                addHours(1);
+                counter++;
                 added_minutes -= 60;
             }
-            setMinutes(this.minutes + added_minutes);
+            addHours(counter);
+            if (this.minutes + added_minutes > 59) {
+                setMinutes(this.minutes + added_minutes - 60);
+            } else {
+                setMinutes(this.minutes + added_minutes);
+            }
         }
     }
 
@@ -92,12 +102,17 @@ public class Work_with_Time {
         if (added_seconds < 0) {
             System.out.println("Mistake!");
         } else {
+            int counter = 0;
             while (added_seconds > 59) {
-                addMinutes(1);
+                counter++;
                 added_seconds -= 60;
             }
-            setSeconds(this.seconds + added_seconds);
+            addMinutes(counter);
+            if (this.seconds + added_seconds > 59) {
+                setSeconds(this.seconds + added_seconds - 60);
+            } else {
+                setSeconds(this.seconds + added_seconds);
+            }
         }
     }
-
 }
