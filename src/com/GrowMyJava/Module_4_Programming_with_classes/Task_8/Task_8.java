@@ -22,5 +22,24 @@ public class Task_8 {
             System.out.println(customer.toString());
         }
 
+        Customer[] sortedCustomer = sortUsersBySurname(customers);
+
+        //show customers by alphabet
+
+
+        private static Customer[] sortUsersBySurname (Customer[]customers){
+            for (int i = 0; i < customers.length - 1; i++) {
+                int temp = i;
+                for (int j = i + 1; j < customers.length; j++) {
+                    if (customers[j].getSurname().compareToIgnoreCase(customers[temp].getSurname()) < 0) {
+                        temp = j;
+                    }
+                }
+                Customer temp = customers[temp];
+                customers[temp] = customers[i];
+                customers[i] = temp;
+            }
+            return customers;
+        }
     }
 }
