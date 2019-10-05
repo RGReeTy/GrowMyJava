@@ -1,6 +1,6 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.Task_8;
 
-import java.math.BigInteger;
+import java.text.DecimalFormat;
 
 public class Customer {
     //8. Создать класс Customer, спецификация которого приведена ниже. Определить конструкторы, set- и get- методы
@@ -29,13 +29,18 @@ public class Customer {
 
     @Override
     public String toString() {
+        DecimalFormat dm = new DecimalFormat();
+        dm.setGroupingUsed(true);
+        dm.setGroupingSize(4);
+
+
         return "Customer {" +
                 "customerID=" + customerID +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", address='" + address + '\'' +
-                ", cardNumber=" + cardNumber +
+                ", cardNumber=" + dm.format(cardNumber) +
                 '}';
     }
 
