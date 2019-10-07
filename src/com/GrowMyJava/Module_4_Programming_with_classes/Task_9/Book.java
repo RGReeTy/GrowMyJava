@@ -1,5 +1,7 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.Task_9;
 
+import java.util.Locale;
+
 public class Book {
     //9. Создать класс Book, спецификация которого приведена ниже. Определить конструкторы, set- и get- методы и
     //метод toString(). Создать второй класс, агрегирующий массив типа Book, с подходящими конструкторами и
@@ -16,10 +18,10 @@ public class Book {
     private String publishingHouse;
     private int yearOfPublishing;
     private int numberOfPage;
-    private int count; //todo numberFormat (for dollars)
+    private double count;              //todo numberFormat (for dollars)
     private String bindingType;
 
-    public Book(int id, String title, String author, String publishingHouse, int yearOfPublishing, int numberOfPage, int count, String bindingType) {
+    public Book(int id, String title, String author, String publishingHouse, int yearOfPublishing, int numberOfPage, double count, String bindingType) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -32,6 +34,10 @@ public class Book {
 
     @Override
     public String toString() {
+        java.util.Currency usd = java.util.Currency.getInstance("USD");
+        java.text.NumberFormat format = java.text.NumberFormat.getCurrencyInstance(Locale.US);
+        format.setCurrency(usd);
+
         return "Book: " +
                 "id=" + id +
                 ", title='" + title + '\'' +
@@ -39,7 +45,7 @@ public class Book {
                 ", publishingHouse='" + publishingHouse + '\'' +
                 ", yearOfPublishing=" + yearOfPublishing +
                 ", numberOfPage=" + numberOfPage +
-                ", count=" + count +
+                ", count=" + format.format(count) +
                 ", bindingType='" + bindingType + '\'';
     }
 
@@ -80,7 +86,11 @@ public class Book {
     }
 
     public void setYearOfPublishing(int yearOfPublishing) {
-        this.yearOfPublishing = yearOfPublishing;
+        if (yearOfPublishing > 1900 & yearOfPublishing < 2019) {
+            this.yearOfPublishing = yearOfPublishing;
+        } else {
+            System.out.println("Wrong year!");
+        }
     }
 
     public int getNumberOfPage() {
@@ -91,7 +101,7 @@ public class Book {
         this.numberOfPage = numberOfPage;
     }
 
-    public int getCount() {
+    public double getCount() {
         return count;
     }
 
