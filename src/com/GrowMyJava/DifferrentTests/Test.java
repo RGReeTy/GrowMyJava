@@ -1,4 +1,4 @@
-package com.GrowMyJava;
+package com.GrowMyJava.DifferrentTests;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.Task_8;
 
-import java.util.ArrayList;
-
 public class Task_8 {
     //8. Создать класс Customer, спецификация которого приведена ниже. Определить конструкторы, set- и get- методы
     //и метод toString(). Создать второй класс, агрегирующий массив типа Customer, с подходящими конструкторами
