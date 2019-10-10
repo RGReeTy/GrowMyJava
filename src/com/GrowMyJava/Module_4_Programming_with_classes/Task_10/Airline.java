@@ -2,6 +2,7 @@ package com.GrowMyJava.Module_4_Programming_with_classes.Task_10;
 
 import java.time.LocalTime;
 
+
 public class Airline {
 
     //10. Создать класс Airline, спецификация которого приведена ниже. Определить конструкторы, set- и get- методы
@@ -36,5 +37,49 @@ public class Airline {
                 ", typeOfAirplane='" + typeOfAirplane + '\'' +
                 ", localTime=" + localTime +
                 ", dayOfWeek=" + getDay;
+    }
+
+    public String getPointOfDestination() {
+        return pointOfDestination;
+    }
+
+    public void setPointOfDestination(String pointOfDestination) {
+        this.pointOfDestination = pointOfDestination;
+    }
+
+    public int getFlightID() {
+        return flightID;
+    }
+
+    public void setFlightID(int flightID) {
+        this.flightID = flightID;
+    }
+
+    public String getTypeOfAirplane() {
+        return typeOfAirplane;
+    }
+
+    public void setTypeOfAirplane(String typeOfAirplane) {
+        this.typeOfAirplane = typeOfAirplane;
+    }
+
+    public LocalTime getLocalTime() {
+        return localTime;
+    }
+
+    public void setLocalTime(LocalTime localTime) {
+        this.localTime = localTime;
+    }
+
+    public int getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public void setDayOfWeek(int dayOfWeek) {
+        if (dayOfWeek >= 1 & dayOfWeek <= 7) {
+            this.dayOfWeek = dayOfWeek;
+        } else {
+            System.out.println("Wrong day");
+        }
     }
 }
