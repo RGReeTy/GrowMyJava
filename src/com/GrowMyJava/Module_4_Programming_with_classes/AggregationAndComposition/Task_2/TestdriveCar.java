@@ -9,20 +9,24 @@ public class TestdriveCar {
 
     public static void main(String[] args) {
 
-        List<Car> cars = new ArrayList<>() {
-            Car boomer = new Car("BMW", "wheels", "engine 2.5");
-            Car mercedes = new Car("Mercedes", "wheels", "engine 2.2");
-            Car yabidabidoo = new Car("yabidabidoo", "none", "none");
-        };
+        Engine engine = new Engine(555, 6.2);
 
-        for (Car car : cars) {
-            car.whatTheModel();
-        }
+        Car car = new Car("Shelby GT500", engine);
 
-        for (Car car : cars) {
-            car.startMoving(car.getCarModel());
-        }
+        car.addWheel(new Wheel(15));
+        car.addWheel(new Wheel(15));
+        car.addWheel(new Wheel(15));
+        car.addWheel(new Wheel(15));
 
+        car.printModel();
+
+        car.fuelUp();
+        car.changeWheel();
+        car.move();
+
+        car.changeWheel();
 
     }
+
 }
+

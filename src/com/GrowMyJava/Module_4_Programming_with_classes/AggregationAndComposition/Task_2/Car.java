@@ -1,56 +1,71 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.AggregationAndComposition.Task_2;
 
-public class Car {
+import java.util.ArrayList;
+import java.util.List;
 
-    private String carModel;
-    private String wheels;
-    private String engine;
+public class Car extends Vehicle {
 
-    public Car(String carModel, String wheels, String engine) {
-        this.carModel = carModel;
-        this.wheels = wheels;
+    private String model;
+    private Engine engine;
+    private List<Wheel> wheels;
+    private boolean fullOfFuel = false;
+    private boolean isMoving = false;
+
+    public Car(String model, Engine engine) {
+        this.model = model;
         this.engine = engine;
+        this.wheels = new ArrayList<>();
     }
 
-    public void startMoving(String carModel) {
-        System.out.println("The car " + carModel + " is starting moving!");
+    public String getModel() {
+        return model;
     }
 
-    public void refuel() {
-        System.out.println("The car is refueled!");
-    }
-
-    public void whatTheModel() {
-        System.out.println("The model of car is " + getCarModel());
-    }
-
-    @Override
-    public String toString() {
-        return "Car " + carModel + '\'' +
-                " has 4 wheels and powerful engine";
-    }
-
-    public String getCarModel() {
-        return carModel;
-    }
-
-    public void setCarModel(String carModel) {
-        this.carModel = carModel;
-    }
-
-    public String getWheels() {
-        return wheels;
-    }
-
-    public void setWheels(String wheels) {
-        this.wheels = wheels;
-    }
-
-    public String getEngine() {
+    public Engine getEngine() {
         return engine;
     }
 
-    public void setEngine(String engine) {
-        this.engine = engine;
+    public List<Wheel> getWheels() {
+        return wheels;
+    }
+
+    public boolean addWheel(Wheel wheel) {
+        return wheels.add(wheel);
+    }
+
+    @Override
+    public void move() {
+        if (wheels.size() != 4) {
+            System.out.println("Wrong number of wheels!");
+        } else if (!fullOfFuel) {
+            System.out.println("There are no fuel!");
+        } else {
+            System.out.println("The car " + model + " is moving.");
+            isMoving = true;
+        }
+    }
+
+    @Override
+    public void fuelUp() {
+        if (isMoving) {
+            System.out.println("Stop the car if you want to fuel up!");
+        } else {
+            System.out.println("The car " + model + " is fuel up.");
+            this.fullOfFuel = true;
+        }
+    }
+
+    @Override
+    public void changeWheel() {
+        if (isMoving) {
+            System.out.println("Stop the car if you want to change the wheel!");
+        } else {
+            System.out.println("Change wheel!");
+        }
+    }
+
+    @Override
+    public void printModel() {
+        System.out.println(model);
     }
 }
