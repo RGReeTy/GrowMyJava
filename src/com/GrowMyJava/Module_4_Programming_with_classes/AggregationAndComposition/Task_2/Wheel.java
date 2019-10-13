@@ -20,8 +20,7 @@ public class Wheel {
         this.diameter = diameter;
     }
 
-    @Override
-    public String toString() {
-        return "Wheels has " + diameter + " inches.";
+    public void printWheel() {
+        System.out.println("Wheels has " + diameter + " inches.");
     }
 }

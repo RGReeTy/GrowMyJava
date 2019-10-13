@@ -27,21 +27,20 @@ public class Customer {
         this.cardNumber = cardNumber;
     }
 
-    @Override
-    public String toString() {
+    public void print() {
         DecimalFormat dm = new DecimalFormat();
         dm.setGroupingUsed(true);
         dm.setGroupingSize(4);
 
 
-        return "Customer {" +
+        System.out.println("Customer {" +
                 "customerID=" + customerID +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", address='" + address + '\'' +
                 ", cardNumber=" + dm.format(cardNumber) +
-                '}';
+                '}');
     }
 
     public int getCustomerID() {

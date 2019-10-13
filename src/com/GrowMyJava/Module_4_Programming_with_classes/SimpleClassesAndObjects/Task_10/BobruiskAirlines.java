@@ -21,7 +21,6 @@ public class BobruiskAirlines {
                 new Airline("Cherepovetz", 1001, "Boeing", LocalTime.of(22, 59), 7),
         };
 
-        // System.out.println(Arrays.toString(airlines));
         System.out.println("------------------------------------");
 
         //a) список рейсов для заданного пункта назначения;
@@ -44,7 +43,7 @@ public class BobruiskAirlines {
         for (Airline flight : airlines) {
             if (flight.getDayOfWeek() == day) {
                 if (time.isBefore(flight.getLocalTime())) {
-                    System.out.println(flight.toString());
+                    flight.print();
                     isCorrect = true;
                 }
             }
@@ -58,7 +57,7 @@ public class BobruiskAirlines {
         boolean isCorrect = false;
         for (Airline flight : airlines) {
             if (flight.getDayOfWeek() == day) {
-                System.out.println(flight.toString());
+                flight.print();
                 isCorrect = true;
             }
         }
@@ -71,7 +70,7 @@ public class BobruiskAirlines {
         boolean isCorrect = false;
         for (Airline flight : airlines) {
             if (flight.getPointOfDestination().contains(destination)) {
-                System.out.println(flight.toString());
+                flight.print();
                 isCorrect = true;
             }
         }

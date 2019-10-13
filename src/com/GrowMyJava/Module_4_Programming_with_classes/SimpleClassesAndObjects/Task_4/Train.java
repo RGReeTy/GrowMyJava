@@ -43,8 +43,7 @@ public class Train {
         this.localTime = localTime;
     }
 
-    @Override
-    public String toString() {
-        return "Train №" + trainID + " to " + pointOfDestination + " departure at " + localTime;
+    public void print() {
+        System.out.println("Train №" + trainID + " to " + pointOfDestination + " departure at " + localTime);
     }
 }

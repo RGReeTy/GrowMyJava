@@ -44,8 +44,7 @@ public class Counter {
         }
     }
 
-    @Override
-    public String toString() {
-        return " " + counter;
+    public void print() {
+        System.out.println(" " + counter);
     }
 }

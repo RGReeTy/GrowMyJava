@@ -66,8 +66,7 @@ public class Triangle {
         this.c = c;
     }
 
-    @Override
-    public String toString() {
-        return "Triangle with sides " + "a=" + a + ", b=" + b + ", c=" + c;
+    public void print() {
+        System.out.println("Triangle with sides " + "a=" + a + ", b=" + b + ", c=" + c);
     }
 }

@@ -17,14 +17,14 @@ public class Task_8 {
         };
 
         for (Customer customer : customers) {
-            System.out.println(customer.toString());
+            customer.print();
         }
 
         System.out.println("-----------------------------------------------------------------");
 
         Customer[] sortedCustomerBySurname = sortUsersBySurname(customers);
         for (Customer customer : sortedCustomerBySurname) {
-            System.out.println(customer.toString());
+            customer.print();
         }
 
         System.out.println("-----------------------------------------------------------------");

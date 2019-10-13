@@ -15,10 +15,9 @@ public class Engine {
         this.valueOfEngine = 1.8;
     }
 
-    @Override
-    public String toString() {
-        return "Engine has " + powerOfEngine +
-                " of horsepower, value of engine = " + valueOfEngine;
+    public void printEngine() {
+        System.out.println("Engine has " + powerOfEngine +
+                " of horsepower, value of engine = " + valueOfEngine);
     }
 
     public int getPowerOfEngine() {

@@ -28,15 +28,14 @@ public class Airline {
         this.dayOfWeek = dayOfWeek;
     }
 
-    @Override
-    public String toString() {
+    public void print() {
         String getDay = DaysOfWeek.getDay(dayOfWeek).toLowerCase();
-        return "Flight: " +
+        System.out.println("Flight: " +
                 "pointOfDestination='" + pointOfDestination + '\'' +
                 ", flightID=" + flightID +
                 ", typeOfAirplane='" + typeOfAirplane + '\'' +
                 ", localTime=" + localTime +
-                ", dayOfWeek=" + getDay;
+                ", dayOfWeek=" + getDay);
     }
 
     public String getPointOfDestination() {

@@ -73,7 +73,7 @@ public class Task_4 {
     }
 
     private static void printAllTrains(Train[] trains) {
-        for (Train train : trains) System.out.println(train.toString());
+        for (Train train : trains) train.print();
     }
 
     private static void getAvailableTrainID(Train[] trains) {

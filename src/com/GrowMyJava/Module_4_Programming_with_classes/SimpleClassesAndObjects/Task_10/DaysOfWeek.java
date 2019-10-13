@@ -42,17 +42,4 @@ public enum DaysOfWeek {
     public String getGetDay() {
         return getDay;
     }
-
-//    public String getDayOfWeek(int numberOfDay){
-//        switch (numberOfDay){
-//            case 1: return MONDAY.toString();
-//            case 2: return TUESDAY.toString();
-//            case 3: return WEDNESDAY.toString();
-//            case 4: return THURSDAY.toString();
-//            case 5: return FRIDAY.toString();
-//            case 6: return SATURDAY.toString();
-//            case 7: return SUNDAY.toString();
-//            }
-//        return null;
-//    }
 }

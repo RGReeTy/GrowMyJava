@@ -16,8 +16,7 @@ public class Word {
         this.interiorOfWord = interiorOfWord;
     }
 
-    @Override
-    public String toString() {
-        return interiorOfWord;
+    public void printWord() {
+        System.out.println(interiorOfWord);
     }
 }

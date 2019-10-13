@@ -32,13 +32,12 @@ public class Book {
         this.bindingType = bindingType;
     }
 
-    @Override
-    public String toString() {
+    public void print() {
         java.util.Currency usd = java.util.Currency.getInstance("USD");
         java.text.NumberFormat format = java.text.NumberFormat.getCurrencyInstance(Locale.US);
         format.setCurrency(usd);
 
-        return "Book: " +
+        System.out.println("Book: " +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
@@ -46,7 +45,7 @@ public class Book {
                 ", yearOfPublishing=" + yearOfPublishing +
                 ", numberOfPage=" + numberOfPage +
                 ", count=" + format.format(count) +
-                ", bindingType='" + bindingType + '\'';
+                ", bindingType='" + bindingType + '\'');
     }
 
     public int getId() {

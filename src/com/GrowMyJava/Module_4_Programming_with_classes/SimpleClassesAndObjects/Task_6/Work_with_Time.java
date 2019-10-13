@@ -23,10 +23,8 @@ public class Work_with_Time {
         this.seconds = 00;
     }
 
-    @Override
-    public String toString() {
-        //return "Time " + "hour=" + hour + ", minutes=" + minutes + ", seconds=" + seconds;
-        return hour + ":" + minutes + ":" + seconds;
+    public void printTime() {
+        System.out.println(hour + ":" + minutes + ":" + seconds);
     }
 
     public int getHour() {

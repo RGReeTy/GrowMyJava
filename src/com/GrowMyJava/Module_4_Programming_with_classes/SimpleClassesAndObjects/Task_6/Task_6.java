@@ -9,32 +9,32 @@ public class Task_6 {
     public static void main(String[] args) {
 
         Work_with_Time date = new Work_with_Time();
-        System.out.println(date.toString());
+        date.printTime();
         //----------------------------------------------------------------------
         date.setHour(15);
         date.setMinutes(75);
         date.setSeconds(-15);
-        System.out.println(date.toString());
+        date.printTime();
         //----------------------------------------------------------------------
         date.addHours(-16);
-        System.out.println(date.toString());
+        date.printTime();
         date.addHours(1);
-        System.out.println(date.toString());
+        date.printTime();
         date.addHours(50);
-        System.out.println(date.toString());
+        date.printTime();
         //----------------------------------------------------------------------
         date.addMinutes(-10);
-        System.out.println(date.toString());
+        date.printTime();
         date.addMinutes(1);
-        System.out.println(date.toString());
+        date.printTime();
         date.addMinutes(555);
-        System.out.println(date.toString());
+        date.printTime();
         //----------------------------------------------------------------------
         date.addSeconds(-16);
-        System.out.println(date.toString());
+        date.printTime();
         date.addSeconds(1);
-        System.out.println(date.toString());
+        date.printTime();
         date.addSeconds(7777);
-        System.out.println(date.toString());
+        date.printTime();
     }
 }
