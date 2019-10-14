@@ -6,15 +6,14 @@ import java.util.List;
 public class District {
 
     private String districtName;
-    private int numberOfCities;
     private double squareOfDistrict;
     private List<City> cities;
 
 
-    public District(String districtName, int numberOfCities, double squareOfDistrict) {
+    public District(String districtName, double squareOfDistrict) {
         this.districtName = districtName;
-        this.numberOfCities = numberOfCities;
         this.squareOfDistrict = squareOfDistrict;
+        this.cities = new ArrayList<>();
     }
 
     public List<City> getCities() {
@@ -33,14 +32,6 @@ public class District {
         this.districtName = districtName;
     }
 
-    public int getNumberOfCities() {
-        return numberOfCities;
-    }
-
-    public void setNumberOfCities(int numberOfCities) {
-        this.numberOfCities = numberOfCities;
-    }
-
     public double getSquareOfDistrict() {
         return squareOfDistrict;
     }
@@ -49,18 +40,12 @@ public class District {
         this.squareOfDistrict = squareOfDistrict;
     }
 
-
-    public boolean addCity(City city) {
-        return cities.add(city);
+    public void addCity(City city) {
+        cities.add(city);
     }
 
     public boolean removeCity(City city) {
         return cities.remove(city);
     }
 
-    public void printSentence() {
-        for (City city : cities) {
-            System.out.print(city + " ");
-        }
-    }
 }
