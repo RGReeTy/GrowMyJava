@@ -25,12 +25,24 @@ public class Main {
         logic.printDistrictInfo(Bobruiskiy);
 
         //TEST REGION
-        Region Mogilevskiy = new Region("Mogilevskiy", "Mogilev");
-        Mogilevskiy.addDistrict(Bobruiskiy);
-        Mogilevskiy.addDistrict(Gluskiy);
-        Mogilevskiy.addDistrict(Osipovichskiy);
-        logic.printRegionInfo(Mogilevskiy);
+        Region Mogilevskaya = new Region("Mogilevskaya", "Mogilev");
+        Mogilevskaya.addDistrict(Bobruiskiy);
+        Mogilevskaya.addDistrict(Gluskiy);
+        Mogilevskaya.addDistrict(Osipovichskiy);
+        logic.printRegionInfo(Mogilevskaya);
+        //------------------------------------------------------------------------------------------------------------
+        City Minsk = new City("Minsk", 2000000);
+        District Minskiy = new District("Minskiy", 625);
+        Minskiy.addCity(Minsk);
+        Region Minskaya = new Region("Minskiy", "Minsk");
+        Minskaya.addDistrict(Minskiy);
+        logic.printRegionInfo(Minskaya);
 
+        //TEST GOVERNMENT
+        Goverment Belarus = new Goverment("Belarus", "Minsk");
+        Belarus.addRegion(Mogilevskaya);
+        Belarus.addRegion(Minskaya);
+        logic.printCountyInfo(Belarus);
     }
 
 }

@@ -9,7 +9,7 @@ public class Goverment {
     private String capitalOfCountry;
     private List<Region> regions;
 
-    public Goverment(String countryName, String capitalOfCountry, List<Region> regions) {
+    public Goverment(String countryName, String capitalOfCountry) {
         this.countryName = countryName;
         this.capitalOfCountry = capitalOfCountry;
         this.regions = new ArrayList<>();
@@ -39,5 +39,11 @@ public class Goverment {
         this.regions = new ArrayList<>();
     }
 
+    public void addRegion(Region region) {
+        regions.add(region);
+    }
 
+    public boolean removeRegion(Region region) {
+        return regions.remove(region);
+    }
 }

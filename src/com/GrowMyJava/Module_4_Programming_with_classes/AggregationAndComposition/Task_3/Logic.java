@@ -49,7 +49,7 @@ public class Logic {
     //--------------------------------------------------------------------------------
     // Country/government BLOCK
     public void printCountyInfo(Goverment goverment) {
-        System.out.println("Country " + goverment.getCountryName() + " has capital " + goverment.getCapitalOfCountry() +
+        System.out.println("Country " + goverment.getCountryName() + " has capital - " + goverment.getCapitalOfCountry() +
                 ". County has " + goverment.getRegions().size() + " regions. Names of region's centres are: " +
                 getCapitalsOfRegions(goverment) + " Total square is " + totalSquareOfCountry(goverment));
     }
