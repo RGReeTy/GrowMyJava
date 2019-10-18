@@ -5,4 +5,12 @@ public class BankService_MainTask {
     //счета. Реализовать поиск и сортировку счетов. Вычисление общей суммы по счетам. Вычисление суммы по
     //всем счетам, имеющим положительный и отрицательный балансы отдельно.
 
+    public static void main(String[] args) {
+
+        BusinessLogic logic = new BusinessLogic();
+
+        Invoice salaryAccount = new Invoice(9554466, 253.55, false);
+        logic.print(salaryAccount);
+
+    }
 }
