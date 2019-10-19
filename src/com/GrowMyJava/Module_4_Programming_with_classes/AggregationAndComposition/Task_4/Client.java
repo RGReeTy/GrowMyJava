@@ -46,4 +46,5 @@ public class Client {
     public boolean removeInvoice(Invoice invoice) {
         return invoices.remove(invoice);
     }
+
 }
