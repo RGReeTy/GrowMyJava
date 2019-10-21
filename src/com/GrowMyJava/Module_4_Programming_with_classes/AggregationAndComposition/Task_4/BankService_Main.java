@@ -1,6 +1,6 @@
 package com.GrowMyJava.Module_4_Programming_with_classes.AggregationAndComposition.Task_4;
 
-public class BankService_MainTask {
+public class BankService_Main {
     //4. Счета. Клиент может иметь несколько счетов в банке. Учитывать возможность блокировки/разблокировки
     //счета. Реализовать поиск и сортировку счетов. Вычисление общей суммы по счетам. Вычисление суммы по
     //всем счетам, имеющим положительный и отрицательный балансы отдельно.
