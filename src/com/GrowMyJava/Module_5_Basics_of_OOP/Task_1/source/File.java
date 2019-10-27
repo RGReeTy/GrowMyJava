@@ -2,7 +2,7 @@ package com.GrowMyJava.Module_5_Basics_of_OOP.Task_1.source;
 
 import java.time.LocalDateTime;
 
-public class File {
+public abstract class File {
 
     private String nameOfFile;
     private boolean isReadable = false;
@@ -44,10 +44,6 @@ public class File {
         isWritable = writable;
     }
 
-    public int getSize() {
-        return size;
-    }
-
     public void setSize(int size) {
         this.size = size;
     }
@@ -74,5 +70,18 @@ public class File {
 
     public void setOpened(LocalDateTime opened) {
         this.opened = opened;
+    }
+
+    public abstract void read();
+
+    public abstract void printContent();
+
+    public abstract int getSize();
+
+    public abstract void addContent(String content);
+
+    @Override
+    public String toString() {
+        return nameOfFile;
     }
 }
