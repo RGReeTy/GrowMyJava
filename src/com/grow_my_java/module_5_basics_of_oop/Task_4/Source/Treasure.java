@@ -2,24 +2,30 @@ package com.grow_my_java.module_5_basics_of_oop.Task_4.Source;
 
 public class Treasure {
 
-    private String nameOfTreasure;
+    private static int genId = 1;
+    private int id;
+    private String typeOfTreasure;
     private String descriptionOfTreasure;
     private double count;
 
-    public Treasure(String nameOfTreasure, String descriptionOfTreasure, double count) {
-        this.nameOfTreasure = nameOfTreasure;
+    public Treasure(String typeOfTreasure, String descriptionOfTreasure, double count) {
+        this.id = genId++;
+        this.typeOfTreasure = typeOfTreasure;
         this.descriptionOfTreasure = descriptionOfTreasure;
         this.count = count;
     }
 
-    public String getNameOfTreasure() {
-        return nameOfTreasure;
+    public String getTypeOfTreasure() {
+        return typeOfTreasure;
     }
 
-    public void setNameOfTreasure(String nameOfTreasure) {
-        this.nameOfTreasure = nameOfTreasure;
+    public void setTypeOfTreasure(String typeOfTreasure) {
+        this.typeOfTreasure = typeOfTreasure;
     }
 
+    public int getId() {
+        return id;
+    }
     public String getDescriptionOfTreasure() {
         return descriptionOfTreasure;
     }
@@ -40,5 +46,12 @@ public class Treasure {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Treasure{" +
+                "typeOfTreasure='" + typeOfTreasure + '\'' +
+                ", descriptionOfTreasure='" + descriptionOfTreasure + '\'' +
+                ", count=" + count +
+                '}';
+    }
 }
