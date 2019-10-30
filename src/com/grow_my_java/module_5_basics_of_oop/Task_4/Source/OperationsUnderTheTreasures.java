@@ -5,10 +5,6 @@ import java.util.Random;
 
 public class OperationsUnderTheTreasures {
 
-    //Дракон и его сокровища. Создать программу, позволяющую обрабатывать сведения о 100 сокровищах в пещере
-    //дракона. Реализовать возможность просмотра сокровищ, выбора самого дорогого по стоимости сокровища и
-    //выбора сокровищ на заданную сумму.
-
     private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private CaveOfTreasures caveOfTreasures;
 
@@ -74,7 +70,6 @@ public class OperationsUnderTheTreasures {
             max = min;
             min = temp;
         }
-        ;
         boolean isExist = false;
         System.out.println("Trying to find treasures with count more than " + min + " and less than " + max + " talers..");
         for (Treasure treasure : caveOfTreasures.getTreasures()) {
