@@ -1,7 +1,7 @@
 package com.grow_my_java.module_5_basics_of_oop.Task_5.Source;
 
-import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.PackageColor;
-import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.PackageType;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Packages.PackageColor;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Packages.PackageType;
 
 import java.util.Random;
 
