@@ -1,29 +1,19 @@
 package com.grow_my_java.module_5_basics_of_oop.Task_5.GiftFactory;
 
-import com.grow_my_java.module_5_basics_of_oop.Task_4.Source.CaveOfTreasures;
-import com.grow_my_java.module_5_basics_of_oop.Task_4.Source.OperationsUnderTheTreasures;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Sweet.SweetGift;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Menu {
     private static Scanner scanner = new Scanner(System.in);
-    private CaveOfTreasures caveOfTreasures = new CaveOfTreasures("Horrible Dragon Cave");
-    private OperationsUnderTheTreasures logic = new OperationsUnderTheTreasures(caveOfTreasures);
-
-    private static int getValue() {
-
-        while (!scanner.hasNextInt()) {
-            scanner.next();
-            System.out.println("Enter again:");
-        }
-        return scanner.nextInt();
-    }
 
     private static int checkValue() {
+
         int value;
         while (true) {
             value = getValue();
-            if (value >= 0 && value <= 4) {
+            if (value > 0) {
                 break;
             } else {
                 System.out.println("Wrong value! Enter again: ");
@@ -35,38 +25,35 @@ public class Menu {
     public void run() {
 
         try {
-            while (true) {
-                System.out.println("Please, choose an option:");
-                System.out.println("0 - Create a cave with 100 treasures.");
-                System.out.println("1 - Print all treasures in the cave.");
-                System.out.println("2 - Find the most expensive treasure.");
-                System.out.println("3 - Print treasures for a given sum.");
-                System.out.println("4 - Exit.");
+            System.out.println("Please, enter the name sweets (candy, chocolate, cookies:");
+            String name = getName();
 
-                int i = checkValue();
 
-                if (i == 0) {
-                    logic.fillArrayListOfTreasures();
+            SweetGift gift = new SweetGift();
 
-                } else if (i == 1) {
-                    System.out.println("The treasures in the cave:");
-                    logic.printInfo();
 
-                } else if (i == 2) {
-                    logic.whereIsMostExpensiveTreasure();
-
-                } else if (i == 3) {
-
-                    logic.selectTreasuresAtDefinitelyCount(175.5, 100.0);
-
-                } else if (i == 4) {
-                    break;
-                }
-            }
         } finally {
             if (scanner != null) {
                 scanner.close();
             }
         }
+    }
+
+    private static int getValue() {
+        while (!scanner.hasNextInt()) {
+            scanner.next();
+            System.out.println("Enter again:");
+        }
+        return scanner.nextInt();
+    }
+
+    private String getName() {
+        Pattern pattern = Pattern.compile("[\\w ]{4,}");
+        scanner.useDelimiter("[\r\n]");
+        while (!scanner.hasNext(pattern)) {
+            scanner.nextLine();
+            System.out.println("The name must contains more than 10 letters! Enter again:");
+        }
+        return scanner.nextLine();
     }
 }

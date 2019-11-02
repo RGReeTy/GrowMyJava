@@ -1,6 +1,6 @@
 package com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Packages;
 
-import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.abstractGift;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.GiftFactory.abstractGift;
 
 public abstract class PackageFactory extends abstractGift {
 

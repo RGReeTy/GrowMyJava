@@ -2,7 +2,7 @@ package com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Sw
 
 import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Sweet.Sweet;
 import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Sweet.SweetType;
-import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.abstractGift;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.GiftFactory.abstractGift;
 
 public class Cookies extends Sweet {
     public Cookies() {

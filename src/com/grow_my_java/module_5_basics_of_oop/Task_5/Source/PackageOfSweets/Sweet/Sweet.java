@@ -2,7 +2,7 @@ package com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Sw
 
 import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Packages.PackageColor;
 import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.PackageOfSweets.Packages.PackageType;
-import com.grow_my_java.module_5_basics_of_oop.Task_5.Source.abstractGift;
+import com.grow_my_java.module_5_basics_of_oop.Task_5.GiftFactory.abstractGift;
 
 import java.util.Objects;
 

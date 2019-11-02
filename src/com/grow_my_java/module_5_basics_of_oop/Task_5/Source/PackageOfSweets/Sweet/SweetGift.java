@@ -45,6 +45,10 @@ public class SweetGift {
         return packageTypes;
     }
 
+    public void setPackageTypes(List<PackageType> packageTypes) {
+        this.packageTypes = packageTypes;
+    }
+
     public boolean addSweet(SweetType sweetType) {
         return sweetTypes.add(sweetType);
     }
