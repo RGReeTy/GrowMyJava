@@ -21,4 +21,5 @@ public class GiftService_Main {
         menu.run();
     }
     //ДОРАБОТАТЬ
+    // походу стоит все переписать с 0
 }
