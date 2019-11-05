@@ -1,7 +1,6 @@
 package com.grow_my_java.module_6.Task_1.source.book;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Book {
     private static int genId = 1;
