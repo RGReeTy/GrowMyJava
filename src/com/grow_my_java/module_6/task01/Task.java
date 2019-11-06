@@ -30,8 +30,6 @@ public class Task {
 
         Pagination<Book> catalogBooks = new Pagination<>(catalog.getBooks());
         catalogBooks.nextPage();
-        catalogBooks.nextPage();
-        catalogBooks.nextPage();
         catalogBooks.previousPage();
 
         Book book = new BookBuilder().withTitle("Java")
