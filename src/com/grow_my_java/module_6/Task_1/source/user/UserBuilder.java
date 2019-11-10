@@ -32,11 +32,6 @@ public class UserBuilder {
         return this;
     }
 
-    public UserBuilder setSalt(String salt) {
-        user.setSalt(salt);
-        return this;
-    }
-
     public User build() {
         return user;
     }
