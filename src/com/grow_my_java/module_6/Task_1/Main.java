@@ -18,6 +18,8 @@ public class Main {
                 System.out.println("0 - Exit.");
 
                 int i = checkValue();
+                int i = checkValue();
+                int i = checkValue();
 
                 if (i == 0) {
                     logic.fillArrayListOfTreasures();
