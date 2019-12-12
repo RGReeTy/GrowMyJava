@@ -11,5 +11,6 @@ public class ComparingStrings {
         s2 = new String(s1);
         System.out.println("сравнение ссылок " + (s1 == s2));
         System.out.println("сравнение значений " + s1.equals(s2));
+
     }
 }
