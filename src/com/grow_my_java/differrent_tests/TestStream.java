@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class TestingTestableTest {
+public class TestStream {
     public static void main(String[] args) {
 
         List<String> list = new ArrayList<String>();
@@ -22,5 +22,7 @@ public class TestingTestableTest {
         Stream stream = list.stream();
 
         stream.filter(x -> x.toString().length() == 3).forEach(System.out::println);
+        System.out.println(stream.count());
+        System.out.println(stream.filter(x -> x.equals("Six")));
     }
 }
