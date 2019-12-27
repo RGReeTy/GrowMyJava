@@ -21,8 +21,9 @@ public class TestStream {
         list.add("Ten");
         Stream stream = list.stream();
 
-        stream.filter(x -> x.toString().length() == 3).forEach(System.out::println);
         System.out.println(stream.count());
         System.out.println(stream.filter(x -> x.equals("Six")));
+        System.out.println(stream.count());
+        stream.filter(x -> x.toString().length() == 3).forEach(System.out::println);
     }
 }
