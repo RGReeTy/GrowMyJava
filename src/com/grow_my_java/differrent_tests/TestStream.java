@@ -25,5 +25,6 @@ public class TestStream {
         System.out.println(stream.filter(x -> x.equals("Six")));
         System.out.println(stream.count());
         stream.filter(x -> x.toString().length() == 3).forEach(System.out::println);
+        System.out.println("OK");
     }
 }
