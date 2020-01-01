@@ -27,6 +27,7 @@ public class TestStream {
         stream.filter(x -> x.toString().length() == 3).forEach(System.out::println);
         System.out.println("OK");
         System.out.println("OK");
+        System.out.println("OK");
 
 
     }
