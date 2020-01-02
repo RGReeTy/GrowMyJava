@@ -28,7 +28,6 @@ public class TestStream {
         System.out.println("OK");
         System.out.println("OK");
         System.out.println("OK");
-
-
+        System.out.println("OK");
     }
 }
