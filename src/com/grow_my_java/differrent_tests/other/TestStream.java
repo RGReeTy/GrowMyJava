@@ -1,4 +1,4 @@
-package com.grow_my_java.differrent_tests;
+package com.grow_my_java.differrent_tests.other;
 
 
 import java.util.ArrayList;

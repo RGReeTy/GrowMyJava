@@ -1,4 +1,4 @@
-package com.grow_my_java.differrent_tests;
+package com.grow_my_java.differrent_tests.other;
 
 public class FuzzBuzzTestInterview {
     //Вывести числа от 0 до 100. Если число делится на 3, то должно быть написано Fuzz, если делится на 5 - Buzz. Если

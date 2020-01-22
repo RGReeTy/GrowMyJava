@@ -1,4 +1,4 @@
-package com.grow_my_java.differrent_tests;
+package com.grow_my_java.differrent_tests.other;
 
 public class ComparingStrings {
     public static void main(String[] args) {
