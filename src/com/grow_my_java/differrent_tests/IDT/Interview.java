@@ -2,6 +2,9 @@ package com.grow_my_java.differrent_tests.IDT;
 
 //17.01.2020 14:00
 
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Interview {
 
     public static void main(String[] args) {
@@ -42,5 +45,31 @@ public class Interview {
             x++;
             y = 2;
         }
+        System.out.println("----------------------------------------------------------------");
+
+        //version 4 with using StreamAPI
+        //Stream.of(2, 3, 4, 5, 6, 7, 8, 9).
+        Stream<Integer> stream = Stream.of(2, 3, 4, 5, 6, 7, 8, 9);
+        IntStream.range(2, 10)
+
+                .limit(9)
+                .forEach(elem -> IntStream.range(1, 10)
+                        // .peek(System.out::println)
+                        .forEach(el -> print(elem, el)));
+
+        //stream.iterator(IntStream.range(1, 10).peek(s -> System.out.print(s)).lforEach(System.out::println)));
+        //IntStream stream1 = IntStream.range(1, 10).mapToObj(element -> IntStream.range(2, 10).peek(result -> String.format("%s x %s = %s", element, result, (element * result));
+        //System.out.println(elem + " x " + (elem -1) + " = " + elem * (elem - 1) + "\t"))
+        //.forEach(System.out::println);
+
+
+        //stream.peek(s -> System.out.println(s + " x " + (s + 1) + " = " + s * (s + 1) + "\t"))
+        //        .forEach(System.out::println);
+
+
+    }
+
+    private static void print(int elem, int el) {
+        System.out.print(el + " x " + elem + " = " + elem * el + "\t");
     }
 }
