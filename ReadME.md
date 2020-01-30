@@ -1,5 +1,5 @@
 ### Module 1.
-[Basics of software code development](https://github.com/RGReeTy/GrowMyJava/tree/master/src/com/GrowMyJava/Module_1_BasicsOfSoftwareCodeDevelopment>)
+[Basics of software code development](https://github.com/RGReeTy/GrowMyJava/tree/master/src/com/grow_my_java/module_1_basics_of_software_code_development)
 
 ### Module 2.
 [Algorithmization](https://github.com/RGReeTy/GrowMyJava/tree/master/src/com/GrowMyJava/Module_2_Algorithmization)
