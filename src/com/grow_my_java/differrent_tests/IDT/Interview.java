@@ -50,12 +50,9 @@ public class Interview {
         //version 4 with using StreamAPI
         //Stream.of(2, 3, 4, 5, 6, 7, 8, 9).
         Stream<Integer> stream = Stream.of(2, 3, 4, 5, 6, 7, 8, 9);
-        IntStream.range(2, 10)
-
-                .limit(9)
+        IntStream.range(1, 10)
                 .forEach(elem -> IntStream.range(1, 10)
-                        // .peek(System.out::println)
-                        .forEach(el -> print(elem, el)));
+                        .forEach(el -> System.out.format("%s * %s = %s\t", el, elem, (el * elem))));
 
         //stream.iterator(IntStream.range(1, 10).peek(s -> System.out.print(s)).lforEach(System.out::println)));
         //IntStream stream1 = IntStream.range(1, 10).mapToObj(element -> IntStream.range(2, 10).peek(result -> String.format("%s x %s = %s", element, result, (element * result));
@@ -69,7 +66,4 @@ public class Interview {
 
     }
 
-    private static void print(int elem, int el) {
-        System.out.print(el + " x " + elem + " = " + elem * el + "\t");
-    }
 }
