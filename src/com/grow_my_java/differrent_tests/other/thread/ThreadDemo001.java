@@ -1,4 +1,4 @@
-package com.grow_my_java.differrent_tests.other;
+package com.grow_my_java.differrent_tests.other.thread;
 
 public class ThreadDemo001 {
     public static void main(String[] args) {
