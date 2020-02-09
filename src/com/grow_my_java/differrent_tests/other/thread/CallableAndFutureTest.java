@@ -14,6 +14,7 @@ public class CallableAndFutureTest {
                 e.printStackTrace();
             }
             System.out.println("Finished");
+
             Random random = new Random();
             int randomValue = random.nextInt(10);
             if (randomValue < 5) throw new Exception("Something bad happened");
