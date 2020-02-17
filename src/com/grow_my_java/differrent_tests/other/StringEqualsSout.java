@@ -8,6 +8,5 @@ public class StringEqualsSout {
         String str3 = new String("java");
 
         System.out.println(str1 == str2 && str1 == str3);
-
     }
 }
