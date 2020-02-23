@@ -128,7 +128,6 @@ public class ConnectionPool {
             connection.close();
         }
 
-        /////////////////////////////////////
         @Override
         public Statement createStatement() throws SQLException {
             return connection.createStatement();
@@ -410,6 +409,4 @@ public class ConnectionPool {
             return connection.isWrapperFor(iface);
         }
     }
-
-
 }
