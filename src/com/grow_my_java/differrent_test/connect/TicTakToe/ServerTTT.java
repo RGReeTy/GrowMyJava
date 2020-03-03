@@ -52,8 +52,6 @@ public class ServerTTT {
         } catch (Exception x) {
             x.printStackTrace();
         }
-
-
     }
 
     private static int makeAServerMove() {

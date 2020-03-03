@@ -3,10 +3,10 @@ package com.grow_my_java.differrent_test.connect.TicTakToe;
 
 public class TicTacToe {
 
-    final char SIGN_X = 'X';
-    final char SIGN_O = 'O';
-    final char SIGN_EMPTY = '.';
-    char[][] table;
+    private final char SIGN_X = 'X';
+    private final char SIGN_O = 'O';
+    private final char SIGN_EMPTY = '.';
+    private char[][] table;
 
     public TicTacToe() {
         // конструктор: инициализация полей

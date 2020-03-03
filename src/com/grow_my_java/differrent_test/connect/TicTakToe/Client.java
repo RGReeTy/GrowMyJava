@@ -28,7 +28,7 @@ public class Client {
             System.out.println("Let win that!");
 
             boolean flag = true;
-            while (flag) {
+            while (true) {
                 System.out.println("Write 2 numbers");
                 out.println(keyboard.readLine());
                 out.println(keyboard.readLine());
