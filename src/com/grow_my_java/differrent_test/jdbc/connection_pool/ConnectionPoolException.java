@@ -4,7 +4,7 @@ public class ConnectionPoolException extends Exception {
 
     private static final long serialVersionUID = 2088396460993072884L;
 
-    public ConnectionPoolException(String message, Exception e) {
+    ConnectionPoolException(String message, Exception e) {
         super(message, e);
     }
 }
