@@ -60,7 +60,7 @@ public class ConnectionPool {
             closeConnectionsQueue(givenAwayConQueue);
             closeConnectionsQueue(connectionQueue);
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "Error closing the connection, e);
+            //logger.log(Level.ERROR, "Error closing the connection, e);
         }
     }
 

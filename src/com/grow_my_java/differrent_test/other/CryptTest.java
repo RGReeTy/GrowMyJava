@@ -1,6 +1,7 @@
 package com.grow_my_java.differrent_test.other;
 
 public class CryptTest {
+    
     public static void main(String[] args) {
 
         String test = "1234";
