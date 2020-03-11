@@ -8,9 +8,16 @@ import java.sql.Statement;
 
 
 public class App {
+
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/bustravelagency?useSSL=false", "root", "123456");
+
+        String user = "root";
+        String password = "0000";
+        String url = "jdbc:mysql://127.0.0.1/bustravelagency?useSSL=false";
+        String driver = "com.mysql.jdbc.Driver";
+
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url, user, password);
 
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM users");
