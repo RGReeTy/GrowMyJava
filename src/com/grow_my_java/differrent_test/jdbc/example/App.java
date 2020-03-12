@@ -13,8 +13,8 @@ public class App {
 
         String user = "root";
         String password = "0000";
-        String url = "jdbc:mysql://127.0.0.1/bustravelagency?useSSL=false";
-        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://127.0.0.1/bustravelagency?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC";
+        String driver = "com.mysql.cj.jdbc.Driver";
 
         Class.forName(driver);
         Connection con = DriverManager.getConnection(url, user, password);
@@ -27,10 +27,8 @@ public class App {
                     rs.getString(2) + " " +
                     rs.getString(3));
         }
-
         rs.close();
         st.close();
         con.close();
-
     }
 }
