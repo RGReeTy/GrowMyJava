@@ -2,6 +2,10 @@ package com.grow_my_java.differrent_test.IDT;
 
 //17.01.2020 14:00
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -48,7 +52,6 @@ public class Interview {
         System.out.println("----------------------------------------------------------------");
 
         //version 4 with using StreamAPI
-        //Stream.of(2, 3, 4, 5, 6, 7, 8, 9).
         Stream<Integer> stream = Stream.of(2, 3, 4, 5, 6, 7, 8, 9);
         IntStream.range(1, 10)
                 .forEach(elem -> IntStream.range(1, 10)
@@ -63,7 +66,29 @@ public class Interview {
         //stream.peek(s -> System.out.println(s + " x " + (s + 1) + " = " + s * (s + 1) + "\t"))
         //        .forEach(System.out::println);
 
+        System.out.println("----------------------------------------------------------------");
+        //version 5 with using StreamAPI
+//        List<Integer> streamInt = Arrays.asList(2, 3, 4, 5, 6, 7, 8, 9);
+//        IntStream intStream = IntStream.range(1, 10);
+//        List<String> stringList = intStream.flatMap(
+//                i -> IntStream.range(2,10).map(
+//                        j-> String.format("%d%d=%d ", i,j,(i*j))
+//                )
+//        ).toString();
+//        IntStream.range(1, 10).flatMap(
+//                i -> IntStream.range(2, 10).map(
+//                        j -> stringList.add((i+"x"+j+"="+(i*j)+" ")))
+//                )
+//        ).forEach(System.out::println);
 
+
+        List<String> names = Arrays.asList("Angela", "Aaron", "Bob", "Claire", "David");
+
+        List<String> namesWithA = names.stream()
+                .filter(name -> name.startsWith("A"))
+                .collect(Collectors.toList());
+
+        System.out.println(namesWithA);
     }
 
 }
